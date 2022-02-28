@@ -1,0 +1,54 @@
+[user]
+	name = Alexandre De Pablo
+	email = alexandre.depablo@gmail.com
+	signingkey = 57B4908213C9435B
+
+[push]
+  default = upstream
+[color]
+  ui = true
+[alias]
+  aa = add --all
+  r  = rebase
+  au = add -u
+  st = status
+  d  = diff -w
+  br = branch
+  ca = commit --amend
+  ci = commit -v
+  fix = commit --amend --no-edit
+  boyscout = commit -m "Boyscout"
+  bs = commit -m "Boyscout"
+  co = checkout
+  pr = !hub pull-request -b develop
+  lg = log --pretty=format:'%C(bold)–%Creset %C(red bold)%h%d%Creset | %C(green)%an%Creset | %C(magenta)%cr%Creset | %C(cyan)%s%Creset'
+  lgr = log --pretty=format:'%s'
+  lgp = log -p
+  lgn = log --name-only
+  lgg = log --graph --decorate --oneline --all
+  cancel = reset "HEAD^"
+  report-csv = "log --format='\"%cd\",\"%cn\",\"%s\"' --date=short --no-merges"
+[pull]
+  rebase = true
+[diff]
+  algorithm = patience
+[core]
+  excludesfile = /Users/brindu/.gitignore_global
+  autocrlf = input
+  editor = vim
+  whitespace = -trailing-space,-indent-with-non-tab,-tab-in-indent
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[github]
+  user = brindu
+[ghi]
+  token = !security find-internet-password -a brindu -s github.com -l 'ghi token' -w
+[rebase]
+  autostash = true
+  required = true
+[commit]
+	gpgsign = true
