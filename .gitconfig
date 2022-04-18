@@ -1,7 +1,7 @@
 [user]
 	name = Alexandre De Pablo
 	email = alexandre.depablo@gmail.com
-	signingkey = 57B4908213C9435B
+	signingkey = 931AFE623FBF2B5E
 
 [push]
   default = upstream
